@@ -1,0 +1,27 @@
+! Title: 喜马拉雅广告拦截
+! Description: 拦截喜马拉雅自有广告投放与行为上报域名
+! Homepage: https://github.com/P50091/dot-dns-adblock
+! Expires: 1 day
+! Last modified: 2026-11-25
+! License: MIT
+
+! 自有广告投放接口
+||adse.ximalaya.com^
+||adse.wsa.ximalaya.com^
+
+! 激励视频广告
+||ad-incentive.ximalaya.com^
+
+! 广告行为上报
+||adbehavior.ximalaya.com^
+
+! 优量汇广告图片 CDN
+||pgdt.ugdtimg.com^
+
+! ============================================
+! 注意：以下域名不要拦截，会影响正常功能
+! mobile.ximalaya.com      主接口
+! live.ximalaya.com        直播流
+! imagev2.xmcdn.com        图片 CDN
+! mres.ximalaya.com        资源
+! ============================================
