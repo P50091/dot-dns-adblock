@@ -1,0 +1,40 @@
+! Title: 红果短剧广告拦截
+! Description: 拦截红果短剧及字节系相关广告请求，同时放行内容域名避免加载异常
+! Homepage: https://github.com/P50091/dot-dns-adblock
+! Expires: 1 day
+! Last modified: 2026-11-25
+! License: MIT
+
+! ============================================
+! 红果核心广告拦截
+! ============================================
+||hongguoapp.com^
+||hongguosdk.com^
+
+! 穿山甲广告 SDK
+||pangolin-sdk-toutiao.com^
+||pglstatp-toutiao.com^
+||sf3-fe-tos.pglstatp-toutiao.com^
+||sf6-fe-tos.pglstatp-toutiao.com^
+
+! 字节系广告兜底
+||ad.pangle.cn^
+||ad.pangolin.cn^
+||tnc.snssdk.com^
+||mon.zijieapi.com^
+||mcs.zijieapi.com^
+
+! ============================================
+! 内容白名单（不加会导致短剧加载不出来）
+! ============================================
+@@||hongguo.com^
+@@||hongguo.douyin.com^
+@@||pstatp.com^
+
+! byteimg 全部放行，唯独排除广告素材签名域
+@@||byteimg.com^$denyallow=p3-ad-sign.byteimg.com,p3-orange-sign.byteimg.com
+
+! ============================================
+! 独立拦截广告素材签名域
+! ============================================
+||p3-ad-sign.byteimg.com^
